@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD10EF621D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10EF611D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift */; };
+		DD10EF641D2E44190084D64C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10EF631D2E44190084D64C /* ShareViewController.swift */; };
 		DDF500341D2CBF9B003F1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */; };
-		DDF500361D2CBF9B003F1F6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF500351D2CBF9B003F1F6F /* ViewController.swift */; };
+		DDF500361D2CBF9B003F1F6F /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */; };
 		DDF500391D2CBF9B003F1F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF500371D2CBF9B003F1F6F /* Main.storyboard */; };
 		DDF5003B1D2CBF9B003F1F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF5003A1D2CBF9B003F1F6F /* Assets.xcassets */; };
 		DDF5003E1D2CBF9B003F1F6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF5003C1D2CBF9B003F1F6F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD10EF611D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
+		DD10EF631D2E44190084D64C /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		DDF500301D2CBF9A003F1F6F /* PhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDF500351D2CBF9B003F1F6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
 		DDF500381D2CBF9B003F1F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDF5003A1D2CBF9B003F1F6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDF5003D1D2CBF9B003F1F6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */,
-				DDF500351D2CBF9B003F1F6F /* ViewController.swift */,
+				DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */,
 				DDF500371D2CBF9B003F1F6F /* Main.storyboard */,
 				DDF5003A1D2CBF9B003F1F6F /* Assets.xcassets */,
 				DDF5003C1D2CBF9B003F1F6F /* LaunchScreen.storyboard */,
 				DDF5003F1D2CBF9B003F1F6F /* Info.plist */,
+				DD10EF611D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift */,
+				DD10EF631D2E44190084D64C /* ShareViewController.swift */,
 			);
 			path = PhotoPicker;
 			sourceTree = "<group>";
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF500361D2CBF9B003F1F6F /* ViewController.swift in Sources */,
+				DDF500361D2CBF9B003F1F6F /* PickImageViewController.swift in Sources */,
+				DD10EF621D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift in Sources */,
+				DD10EF641D2E44190084D64C /* ShareViewController.swift in Sources */,
 				DDF500341D2CBF9B003F1F6F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +297,7 @@
 				DDF500441D2CBF9B003F1F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
