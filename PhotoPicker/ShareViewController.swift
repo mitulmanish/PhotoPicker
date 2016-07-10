@@ -16,6 +16,8 @@ class ShareViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        memedImageView.clipsToBounds = true
+        
         if let memeObject = sharableMeme {
             memedImageView.image = memeObject.memedImage
         } else {
@@ -35,6 +37,13 @@ class ShareViewController: UIViewController {
         let activityViewController = UIActivityViewController(activityItems: activityItem, applicationActivities: nil)
         
         self.presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func saveMeme() {
+        
+        if let meme = self.sharableMeme {
+            DataAccess.sharedInstance.saveNewMeme(meme.topText, bottomText: meme.BottomText, rawImage: meme.rawImage, memedImage: meme.memedImage)
+        }
     }
     
     @IBAction func backToMaster() {

@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD10EF621D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10EF611D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift */; };
 		DD10EF641D2E44190084D64C /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD10EF631D2E44190084D64C /* ShareViewController.swift */; };
+		DDBCCC521D32475100B79A87 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCCC511D32475100B79A87 /* MemeTableViewController.swift */; };
+		DDBCCC541D3286AE00B79A87 /* MemeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBCCC531D3286AE00B79A87 /* MemeTableViewCell.swift */; };
+		DDE373571D32118500DF229A /* PhotoPicker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE373551D32118500DF229A /* PhotoPicker.xcdatamodeld */; };
+		DDE3735B1D3211EF00DF229A /* Meme+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE373591D3211EF00DF229A /* Meme+CoreDataProperties.swift */; };
+		DDE3735C1D3211EF00DF229A /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE3735A1D3211EF00DF229A /* Meme.swift */; };
+		DDE3735F1D32143D00DF229A /* DataAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE3735E1D32143D00DF229A /* DataAccess.swift */; };
 		DDF500341D2CBF9B003F1F6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */; };
 		DDF500361D2CBF9B003F1F6F /* PickImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */; };
 		DDF500391D2CBF9B003F1F6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF500371D2CBF9B003F1F6F /* Main.storyboard */; };
@@ -17,8 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD10EF611D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
 		DD10EF631D2E44190084D64C /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		DDBCCC511D32475100B79A87 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		DDBCCC531D3286AE00B79A87 /* MemeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewCell.swift; sourceTree = "<group>"; };
+		DDE373561D32118500DF229A /* PhotoPicker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoPicker.xcdatamodel; sourceTree = "<group>"; };
+		DDE373591D3211EF00DF229A /* Meme+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meme+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DDE3735A1D3211EF00DF229A /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		DDE3735E1D32143D00DF229A /* DataAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAccess.swift; sourceTree = "<group>"; };
 		DDF500301D2CBF9A003F1F6F /* PhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickImageViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +49,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDE373581D3211CC00DF229A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				DDE373591D3211EF00DF229A /* Meme+CoreDataProperties.swift */,
+				DDE3735A1D3211EF00DF229A /* Meme.swift */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		DDE3735D1D32142100DF229A /* Data Access */ = {
+			isa = PBXGroup;
+			children = (
+				DDE3735E1D32143D00DF229A /* DataAccess.swift */,
+			);
+			name = "Data Access";
+			sourceTree = "<group>";
+		};
 		DDF500271D2CBF9A003F1F6F = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +85,18 @@
 		DDF500321D2CBF9A003F1F6F /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				DDE3735D1D32142100DF229A /* Data Access */,
+				DDE373581D3211CC00DF229A /* DataModel */,
 				DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */,
 				DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */,
 				DDF500371D2CBF9B003F1F6F /* Main.storyboard */,
 				DDF5003A1D2CBF9B003F1F6F /* Assets.xcassets */,
 				DDF5003C1D2CBF9B003F1F6F /* LaunchScreen.storyboard */,
 				DDF5003F1D2CBF9B003F1F6F /* Info.plist */,
-				DD10EF611D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift */,
 				DD10EF631D2E44190084D64C /* ShareViewController.swift */,
+				DDE373551D32118500DF229A /* PhotoPicker.xcdatamodeld */,
+				DDBCCC511D32475100B79A87 /* MemeTableViewController.swift */,
+				DDBCCC531D3286AE00B79A87 /* MemeTableViewCell.swift */,
 			);
 			path = PhotoPicker;
 			sourceTree = "<group>";
@@ -142,10 +173,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE373571D32118500DF229A /* PhotoPicker.xcdatamodeld in Sources */,
+				DDE3735B1D3211EF00DF229A /* Meme+CoreDataProperties.swift in Sources */,
 				DDF500361D2CBF9B003F1F6F /* PickImageViewController.swift in Sources */,
-				DD10EF621D2D82BB0084D64C /* ZipCodeTextFieldDelegate.swift in Sources */,
+				DDBCCC521D32475100B79A87 /* MemeTableViewController.swift in Sources */,
+				DDE3735C1D3211EF00DF229A /* Meme.swift in Sources */,
 				DD10EF641D2E44190084D64C /* ShareViewController.swift in Sources */,
+				DDBCCC541D3286AE00B79A87 /* MemeTableViewCell.swift in Sources */,
 				DDF500341D2CBF9B003F1F6F /* AppDelegate.swift in Sources */,
+				DDE3735F1D32143D00DF229A /* DataAccess.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +336,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DDE373551D32118500DF229A /* PhotoPicker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DDE373561D32118500DF229A /* PhotoPicker.xcdatamodel */,
+			);
+			currentVersion = DDE373561D32118500DF229A /* PhotoPicker.xcdatamodel */;
+			path = PhotoPicker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DDF500281D2CBF9A003F1F6F /* Project object */;
 }
