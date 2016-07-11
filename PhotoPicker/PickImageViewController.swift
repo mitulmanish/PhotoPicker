@@ -59,7 +59,7 @@ UINavigationControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.navigationItem.title = "Mimifier"
         picker.delegate = self   //the required delegate to get a photo back to the app.
         configureTextFields()
     }

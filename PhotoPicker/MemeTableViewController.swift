@@ -16,11 +16,13 @@ class MemeTableViewController: UITableViewController, NSFetchedResultsController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+         self.navigationItem.title = "Saved Memes"
         fetch()
     }
     
     func fetch() {
         
+        print("fetch")
         let fetchRequest = NSFetchRequest(entityName: "Meme")
         let sortDescriptor = NSSortDescriptor(key: "bottomText", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -92,7 +94,23 @@ class MemeTableViewController: UITableViewController, NSFetchedResultsController
         }    
     }
     */
-
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .Default, title: "Delete") { (action, indexPath) in
+            let managedObjectContext = ((UIApplication.sharedApplication().delegate as?
+                AppDelegate)?.managedObjectContext)!
+            let itemToBeDeleted = self.fetchResultController.objectAtIndexPath(indexPath) as! Meme
+            managedObjectContext.deleteObject(itemToBeDeleted)
+            
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print(error)
+            }
+        }
+        deleteAction.backgroundColor = UIColor(red: 207.0/255.0, green: 0.0/255.0, blue: 15.0/255.0, alpha: 1.0)
+        return [deleteAction]
+    }
 
     /*
     // MARK: - Navigation

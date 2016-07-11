@@ -24,7 +24,13 @@
                                 <items>
                                     <barButtonItem image="Camera" id="Q8O-kj-Ynd">
                                         <connections>
-                                            <action selector="photoFromLibrary:" destination="BYZ-38-t0r" id="O5q-DE-Qa3"/>
+                                            <action selector="shootPhoto:" destination="BYZ-38-t0r" id="rf6-Xd-Njw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cNL-w9-lqf"/>
+                                    <barButtonItem image="iOS Photos-36" id="yHy-pf-PWf" userLabel=" Photo Library">
+                                        <connections>
+                                            <action selector="photoFromLibrary:" destination="BYZ-38-t0r" id="yqi-yh-w2M"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -95,7 +101,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="Q8O-kj-Ynd" id="WCF-54-8nJ"/>
                         <outlet property="myImageView" destination="mCf-HY-MbD" id="32J-rO-1hl"/>
-                        <outlet property="myToolBar" destination="Zr6-Gw-KnS" id="fme-Pt-g8f"/>
+                        <outlet property="myToolBar" destination="Zr6-Gw-KnS" id="Noi-Gl-VFo"/>
                         <outlet property="userTextFieldBottom" destination="C42-LM-N6e" id="gBw-G3-jXs"/>
                         <outlet property="userTextFieldTop" destination="suM-wf-QgP" id="h9S-R5-qGN"/>
                     </connections>
@@ -305,5 +311,6 @@
         <image name="Camera" width="36" height="36"/>
         <image name="Mobile Home-36" width="36" height="36"/>
         <image name="dog" width="1080" height="720"/>
+        <image name="iOS Photos-36" width="36" height="36"/>
     </resources>
 </document>
