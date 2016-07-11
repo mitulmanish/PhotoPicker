@@ -63,9 +63,11 @@ class MemeTableViewController: UITableViewController, NSFetchedResultsController
             
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MemeTableViewCell
         
-        //cell.topText.text = meme.topText
-        //cell.bottomText.text = meme.bottomText
+        cell.memeImage.layer.borderColor = UIColor.whiteColor().CGColor
         cell.memeImage.image = UIImage(data: meme.memedImage!)
+        
+        cell.topText.text = meme.topText
+        cell.bottomText.text = meme.bottomText
         
         return cell
     }

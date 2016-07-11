@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -180,25 +181,75 @@
         <scene sceneID="uyH-zi-fvS">
             <objects>
                 <tableViewController title="Saved Memes" id="tGi-st-WT7" customClass="MemeTableViewController" customModule="PhotoPicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1uA-aQ-uYF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="1uA-aQ-uYF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="150" id="JX8-qo-0qJ" customClass="MemeTableViewCell" customModule="PhotoPicker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="JX8-qo-0qJ" customClass="MemeTableViewCell" customModule="PhotoPicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JX8-qo-0qJ" id="F55-47-UDf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-KI-UDs">
-                                            <rect key="frame" x="13" y="8" width="127" height="133"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="N1P-KI-UDs">
+                                            <rect key="frame" x="14" y="10" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="NdJ-5s-V1X"/>
+                                                <constraint firstAttribute="width" constant="60" id="PcM-2n-oOQ"/>
+                                                <constraint firstAttribute="height" constant="80" id="QCn-2R-6jr"/>
+                                                <constraint firstAttribute="height" constant="60" id="T9j-Iv-kHN"/>
+                                                <constraint firstAttribute="width" secondItem="N1P-KI-UDs" secondAttribute="height" multiplier="1:1" id="uup-yx-DyC"/>
+                                                <constraint firstAttribute="width" secondItem="N1P-KI-UDs" secondAttribute="height" multiplier="1:1" id="yXM-iY-bHc"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="PcM-2n-oOQ"/>
+                                                    <exclude reference="T9j-Iv-kHN"/>
+                                                    <exclude reference="uup-yx-DyC"/>
+                                                    <exclude reference="yXM-iY-bHc"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Cj-HE-Qru">
+                                            <rect key="frame" x="102" y="10" width="490" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="490" id="Ln9-80-2ki"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mgo-ad-30f">
+                                            <rect key="frame" x="102" y="53" width="490" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5Cj-HE-Qru" firstAttribute="leading" secondItem="N1P-KI-UDs" secondAttribute="trailing" constant="8" symbolic="YES" id="5q7-Zd-Vwd"/>
+                                        <constraint firstItem="5Cj-HE-Qru" firstAttribute="top" secondItem="N1P-KI-UDs" secondAttribute="top" id="BMB-td-rsa"/>
+                                        <constraint firstItem="N1P-KI-UDs" firstAttribute="leading" secondItem="F55-47-UDf" secondAttribute="leadingMargin" constant="6" id="Bj8-dv-6nu"/>
+                                        <constraint firstItem="Mgo-ad-30f" firstAttribute="leading" secondItem="5Cj-HE-Qru" secondAttribute="leading" id="JeW-de-Eev"/>
+                                        <constraint firstItem="Mgo-ad-30f" firstAttribute="top" secondItem="5Cj-HE-Qru" secondAttribute="bottom" constant="22" id="hrk-gs-gV4"/>
+                                        <constraint firstItem="N1P-KI-UDs" firstAttribute="top" secondItem="F55-47-UDf" secondAttribute="topMargin" constant="2" id="kyY-3g-FiD"/>
+                                        <constraint firstItem="Mgo-ad-30f" firstAttribute="trailing" secondItem="5Cj-HE-Qru" secondAttribute="trailing" id="lrV-bU-ZNb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="bottomText" destination="Mgo-ad-30f" id="uvq-BO-RvE"/>
                                     <outlet property="memeImage" destination="N1P-KI-UDs" id="SwX-f4-M4x"/>
+                                    <outlet property="topText" destination="5Cj-HE-Qru" id="OB2-aG-6eo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -253,5 +304,6 @@
     <resources>
         <image name="Camera" width="36" height="36"/>
         <image name="Mobile Home-36" width="36" height="36"/>
+        <image name="dog" width="1080" height="720"/>
     </resources>
 </document>
