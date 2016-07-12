@@ -8,19 +8,16 @@
 
 import UIKit
 
-class PickImageViewController: UIViewController, UITextFieldDelegate, 
+class PickImageViewController: UIViewController, UITextFieldDelegate,
     UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
-
+    
     let defaultText = "TEXT AREA"
+    
     @IBOutlet weak var myImageView: UIImageView!
-    
     @IBOutlet weak var myToolBar: UIToolbar!
-    
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    
     @IBOutlet weak var userTextFieldTop: UITextField!
-    
     @IBOutlet weak var userTextFieldBottom: UITextField!
     
     
@@ -79,7 +76,7 @@ UINavigationControllerDelegate {
             textField.backgroundColor = UIColor.clearColor()
         }
     }
-
+    
     
     //MARK: - Delegates
     // if the user select a photo or click a picture and wants to use it ,
@@ -143,7 +140,7 @@ UINavigationControllerDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        //cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) ? true : false
+        cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) ? true : false
         subscribeToKeyboardNotifications()
         
     }
@@ -206,7 +203,7 @@ UINavigationControllerDelegate {
             UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        // TODO:  Show toolbar and navbar 
+        // TODO:  Show toolbar and navbar
         showExtras()
         
         return memedImage
@@ -225,8 +222,8 @@ UINavigationControllerDelegate {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-
-
+    
+    
 }
 
 struct MemeObject {

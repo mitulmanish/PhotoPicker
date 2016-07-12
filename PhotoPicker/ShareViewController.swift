@@ -31,7 +31,7 @@ class ShareViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func shareImage() {
+    func shareImage() {
         let activityItem: [AnyObject] = [self.sharableMeme?.memedImage as! AnyObject]
         
         let activityViewController = UIActivityViewController(activityItems: activityItem, applicationActivities: nil)
@@ -44,6 +44,8 @@ class ShareViewController: UIViewController {
         if let meme = self.sharableMeme {
             DataAccess.sharedInstance.saveNewMeme(meme.topText, bottomText: meme.BottomText, rawImage: meme.rawImage, memedImage: meme.memedImage)
         }
+        
+        shareImage()
     }
     
     @IBAction func backToMaster() {

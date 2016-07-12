@@ -270,11 +270,11 @@
             </objects>
             <point key="canvasLocation" x="3492" y="1084"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Saved  Memes-->
         <scene sceneID="Ooh-Sa-X6k">
             <objects>
                 <navigationController id="B22-9u-g2t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="PVj-2P-jKH"/>
+                    <tabBarItem key="tabBarItem" title="Saved  Memes" image="Day View-36" id="PVj-2P-jKH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DH0-tS-Z9J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -309,6 +309,7 @@
     </scenes>
     <resources>
         <image name="Camera" width="36" height="36"/>
+        <image name="Day View-36" width="36" height="36"/>
         <image name="Mobile Home-36" width="36" height="36"/>
         <image name="dog" width="1080" height="720"/>
         <image name="iOS Photos-36" width="36" height="36"/>

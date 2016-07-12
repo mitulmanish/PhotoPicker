@@ -49,6 +49,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD8F69C41D33AFBD003EAEB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD10EF631D2E44190084D64C /* ShareViewController.swift */,
+				DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */,
+				DDBCCC511D32475100B79A87 /* MemeTableViewController.swift */,
+				DDBCCC531D3286AE00B79A87 /* MemeTableViewCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DD8F69C51D33AFC9003EAEB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDF500371D2CBF9B003F1F6F /* Main.storyboard */,
+				DDF5003C1D2CBF9B003F1F6F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DD8F69C61D33AFD4003EAEB7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */,
+				DDF5003F1D2CBF9B003F1F6F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DDE373581D3211CC00DF229A /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,18 +114,13 @@
 		DDF500321D2CBF9A003F1F6F /* PhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				DD8F69C61D33AFD4003EAEB7 /* Supporting Files */,
+				DD8F69C51D33AFC9003EAEB7 /* View */,
+				DD8F69C41D33AFBD003EAEB7 /* Controller */,
 				DDE3735D1D32142100DF229A /* Data Access */,
 				DDE373581D3211CC00DF229A /* DataModel */,
-				DDF500331D2CBF9B003F1F6F /* AppDelegate.swift */,
-				DDF500351D2CBF9B003F1F6F /* PickImageViewController.swift */,
-				DDF500371D2CBF9B003F1F6F /* Main.storyboard */,
 				DDF5003A1D2CBF9B003F1F6F /* Assets.xcassets */,
-				DDF5003C1D2CBF9B003F1F6F /* LaunchScreen.storyboard */,
-				DDF5003F1D2CBF9B003F1F6F /* Info.plist */,
-				DD10EF631D2E44190084D64C /* ShareViewController.swift */,
 				DDE373551D32118500DF229A /* PhotoPicker.xcdatamodeld */,
-				DDBCCC511D32475100B79A87 /* MemeTableViewController.swift */,
-				DDBCCC531D3286AE00B79A87 /* MemeTableViewCell.swift */,
 			);
 			path = PhotoPicker;
 			sourceTree = "<group>";
