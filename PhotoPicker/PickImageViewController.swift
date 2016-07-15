@@ -9,8 +9,7 @@
 import UIKit
 
 class PickImageViewController: UIViewController, UITextFieldDelegate,
-    UIImagePickerControllerDelegate,
-UINavigationControllerDelegate {
+UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     let defaultText = "TEXT AREA"
     
@@ -25,7 +24,7 @@ UINavigationControllerDelegate {
     
     func cameraNotAvailable() {
         let alertViewController = UIAlertController(title: "Camera Not Supported",
-                                                    message: "This device does not have a camera",preferredStyle: .ActionSheet)
+                                                    message: "This device does not have a camera", preferredStyle: .ActionSheet)
         
         let okAction = UIAlertAction(title: "Ok", style: .Default, handler: nil)
         
@@ -111,7 +110,6 @@ UINavigationControllerDelegate {
         default: break
             
         }
-        
         return false
     }
     
@@ -142,7 +140,6 @@ UINavigationControllerDelegate {
         super.viewWillAppear(true)
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) ? true : false
         subscribeToKeyboardNotifications()
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -150,16 +147,14 @@ UINavigationControllerDelegate {
         unsubscribeFromKeyboardNotifications()
     }
     func subscribeToKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PickImageViewController.keyboardWillShow(_:))    , name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PickImageViewController.keyboardWillHide(_:))    , name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PickImageViewController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PickImageViewController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func unsubscribeFromKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().removeObserver(self, name:
             UIKeyboardWillShowNotification, object: nil)
     }
-    
-    
     
     func keyboardWillShow(notification: NSNotification) {
         if (userTextFieldBottom.editing) {
@@ -222,8 +217,6 @@ UINavigationControllerDelegate {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
-    
 }
 
 struct MemeObject {
