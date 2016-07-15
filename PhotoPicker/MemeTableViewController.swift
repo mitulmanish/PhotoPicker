@@ -22,7 +22,6 @@ class MemeTableViewController: UITableViewController, NSFetchedResultsController
     
     func fetch() {
         
-        print("fetch")
         let fetchRequest = NSFetchRequest(entityName: "Meme")
         let sortDescriptor = NSSortDescriptor(key: "bottomText", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
